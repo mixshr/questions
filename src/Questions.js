@@ -1,10 +1,10 @@
 import SingleQuestion from './Question'
-const Questions = ({questions}) => {
+const Questions = ({questions, activeId, toggleQuestion}) => {
     return <section className='section'>
-        <h1>Questions</h1>
+        <h1 className='header'>Questions</h1>
         {
             questions.map((question) => {
-                return <SingleQuestion key={question.id} {...question}/>
+                return <SingleQuestion key={question.id} {...question} activeId={activeId} toggleQuestion={toggleQuestion}/>
             })
         }
     </section>

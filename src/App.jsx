@@ -4,8 +4,15 @@ import Questions from "./Questions";
 
 function App() {
     const [questions, setQuestions] = useState(data);
-    return <main>
-        <Questions questions={questions} />
+    const [activeId, setActiveId] = useState(1);
+
+    const toggleQuestion = (id) => {
+        const nawActiveId = id === activeId ? null : id;
+        setActiveId(nawActiveId)
+    };
+
+    return <main className='container'>
+        <Questions questions={questions} activeId={activeId} toggleQuestion={toggleQuestion}/>
     </main>;
 }
 
