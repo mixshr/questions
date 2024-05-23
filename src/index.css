@@ -177,6 +177,8 @@ main {
   margin-bottom: 1rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
+  overflow: hidden; /* Скрывает все содержимое, выходящее за рамки блока */
+  max-width: 850px; /* Устанавливает максимальную ширину контейнера */
 }
 .question h4 {
   text-transform: none;
